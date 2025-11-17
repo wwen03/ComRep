@@ -37,7 +37,7 @@ source("Scripts/04_Integrated_Scenario_ComRep.R")
 source("Scripts/05_Sensitivity_Analysis_Targets.R")
 source("Scripts/06_Sensitivity_Analysis_Budget.R")
 
-# Generate visualizations
+# Evaluate scenarios, correlation test,  visualizations
 source("Scripts/07_Evaluating_Scenarios_Plots.R")
 ```
 
