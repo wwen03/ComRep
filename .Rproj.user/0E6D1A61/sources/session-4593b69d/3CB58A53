@@ -1,0 +1,26 @@
+{
+    "id": "3CB58A53",
+    "path": "D:/ComRep Project/ComRep/Github/ComRep/Scripts/06_Sensitivity_Analysis_Budget.R",
+    "project_path": "Scripts/06_Sensitivity_Analysis_Budget.R",
+    "type": "r_source",
+    "hash": "237511779",
+    "contents": "",
+    "dirty": false,
+    "created": 1763354864352.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "428,5",
+        "scrollLine": "407"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1763354912,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1763354910232,
+    "read_only": false,
+    "read_only_alternatives": []
+}
