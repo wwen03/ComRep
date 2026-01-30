@@ -19,6 +19,7 @@ library(grid)
 
 # Calculate total planning units
 total_planning_units <- length(cells(planning_units.1.resize))
+print(total_planning_units)
 
 # Define budget proportions with scientific justification
 budget_proportions <- c(
@@ -67,12 +68,6 @@ write.csv(budget_scenarios,
     "Output/Analysis/budget_scenarios_justification.csv",
     row.names = FALSE
 )
-
-# Generate boundary length data for the planning units
-antarctic_bd <- boundary_matrix(planning_units.1.resize)
-
-# Manually re-scale the boundary length values
-antarctic_bd <- rescale_matrix(antarctic_bd)
 
 ################################################################################
 ## Generate solutions for each budget level

@@ -9,7 +9,6 @@ solutions <- c(s1, s2, s3, s4)
 names(solutions) <- c("scenario-1", "scenario-2", "scenario-3", "scenario-4")
 
 ## analyse in the different solutions with species targets and research stations
-
 scenarios_performance_models <- data.frame(
   solution = character(),
   no_selected = numeric(),

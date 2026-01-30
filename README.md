@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo provides a set of R scripts for "an ice-free conservation plan for Antarctica: A focus on comprehensiveness and representativeness".
+This repo provides a set of R scripts for "Conservation planning for biodiversity of ice-free Antarctica: A focus on comprehensiveness and representativeness".
 
 ## Code Structure
 
