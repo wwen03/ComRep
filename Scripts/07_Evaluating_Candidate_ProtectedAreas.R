@@ -358,6 +358,40 @@ if (file.exists(species_data_file)) {
 }
 
 ################################################################################
+# Matrix illustrating protection of 69 species groups across 16 ACBRs
+################################################################################
+# Note: This section requires detailed species representation data from previous analyses
+ggplot(targets_specs, aes(
+  x = acbr, y = species_group, # Reverted to 'species_group' on y-axis
+  color = as.factor(ifelse(relative_held == 0, "Not represented", "Represented")),
+  shape = as.factor(scenario)
+)) +
+  geom_point(size = 2) +
+  scale_color_manual(values = c("Not represented" = "red", "Represented" = "black")) +
+  scale_shape_manual(values = c(15, 15, 15, 15)) +
+  labs(
+    x = "ACBR",
+    y = "69 Species Groups",
+    color = ""
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 8),
+    axis.text.y = element_text(size = 8),
+    axis.title.x = element_text(face = "bold", size = 10),
+    axis.title.y = element_text(face = "bold", size = 10),
+    plot.title = element_text(size = 10, face = "bold"),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    strip.text = element_text(size = 10),
+    legend.position = "bottom",
+    panel.border = element_rect(color = "black", fill = NA, linewidth = 1)
+  ) +
+  guides(shape = "none") +
+  facet_wrap(~scenario, ncol = 4)
+ggsave("Outputs/species_group_acbr_matrix.png", width = 12, height = 8, dpi = 400)
+
+################################################################################
 # Correlation and statistical analysis across solutions
 ################################################################################
 # Note: This section requires detailed species representation data from previous analyses
@@ -517,3 +551,5 @@ if (file.exists(species_solution_file)) {
   cat("Species solution representation data file not found. Skipping statistical analysis.\n")
   cat("Expected file: ", species_solution_file, "\n")
 }
+
+################################################################################
