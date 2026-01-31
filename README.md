@@ -10,13 +10,13 @@ This repo provides a set of R scripts for "Conservation planning for biodiversit
 ComRep/
 ├── Outputs/
 ├── Scripts/
-│   ├── 01_Basic_Scenario_ComRep.R
-│   ├── 02_Species_Range_Scenario_ComRep.R
-│   ├── 03_Adaptive_Scenario_ComRep.R
-│   ├── 04_Integrated_Scenario_ComRep.R
-│   ├── 05_Sensitivity_Analysis_Targets.R
-│   ├── 06_Sensitivity_Analysis_Budget.R
-│   └── 07_Evaluating_Scenarios_Plots.R
+│   ├── 01_Data_Preparation_AH_SpeciesRange.R
+│   ├── 02_Access_Cost_Function.R
+│   ├── 03_Sensivity_Analysis_Budget.R
+│   ├── 04_Sensivity_Analysis_Target.R
+│   ├── 05_Targets_Analysis_Comparison.R
+│   ├── 06_Costs_Analysis_Comparison.R
+│   └── 07_Evaluating_Candidate_ProtectedAreas.R
 └── ComRep.Rproj
 └── LICENSE
 └── README.md
@@ -27,17 +27,19 @@ ComRep/
 Run the scripts in numerical order for a complete analysis:
 
 ```r
-# Run scenarios sequentially
-source("Scripts/01_Basic_Scenario_ComRep.R")
-source("Scripts/02_Species_Range_Scenario_ComRep.R")
-source("Scripts/03_Adaptive_Scenario_ComRep.R")
-source("Scripts/04_Integrated_Scenario_ComRep.R")
+# Data preparation
+source("Scripts/01_Data_Preparation_AH_SpeciesRange.R")
+source("Scripts/02_Access_Cost_Function.R")
 
 # Perform sensitivity analyses
-source("Scripts/05_Sensitivity_Analysis_Targets.R")
-source("Scripts/06_Sensitivity_Analysis_Budget.R")
+source("Scripts/03_Sensitivity_Analysis_Budget.R")
+source("Scripts/04_Sensitivity_Analysis_Target.R")
 
-# Evaluate scenarios, correlation test,  visualizations
+# Comparison analyses
+source("Scripts/05_Targets_Analysis_Comparison.R")
+source("Scripts/06_Costs_Analysis_Comparison.R")
+
+# Evaluate candidate protected areas, correlation test,  visualizations
 source("Scripts/07_Evaluating_Scenarios_Plots.R")
 ```
 
